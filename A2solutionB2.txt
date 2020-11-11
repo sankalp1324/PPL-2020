@@ -1,0 +1,28 @@
+
+B-2.o:     file format pe-i386
+
+
+Disassembly of section .text:
+
+00000000 <_main>:
+   0:   55                      push   %ebp
+   1:   89 e5                   mov    %esp,%ebp
+   3:   83 e4 f0                and    $0xfffffff0,%esp
+   6:   83 ec 10                sub    $0x10,%esp
+   9:   e8 00 00 00 00          call   e <_main+0xe>
+                        a: DISP32       ___main
+   e:   c7 44 24 08 0a 00 00    movl   $0xa,0x8(%esp)
+  15:   00
+  16:   c7 44 24 0c 00 00 00    movl   $0x0,0xc(%esp)
+  1d:   00
+  1e:   eb 0e                   jmp    2e <_main+0x2e>
+  20:   a1 00 00 00 00          mov    0x0,%eax
+                        21: dir32       _N-0x4
+  25:   01 44 24 08             add    %eax,0x8(%esp)
+  29:   83 44 24 0c 01          addl   $0x1,0xc(%esp)
+  2e:   83 7c 24 0c 03          cmpl   $0x3,0xc(%esp)
+  33:   7e eb                   jle    20 <_main+0x20>
+  35:   8b 44 24 08             mov    0x8(%esp),%eax
+  39:   c9                      leave
+  3a:   c3                      ret
+  3b:   90                      nop

@@ -1,0 +1,28 @@
+# Handling zero division error
+def divide(x, y):
+    try:
+        result = x / y
+        print("The result is :", result)
+    except ZeroDivisionError:
+        print("ERROR! \nYou are dividing by zero. ")
+
+# Raising error
+
+
+def raiserror(x):
+    if x > 3:
+        raise Exception('x should not exceed 3.\n The value of x was:', x)
+
+
+# Handling raised error
+
+
+def handlerror(x):
+    try:
+        raiserror(x)
+    except:
+        print("ERROR!\nValue of x is greater than 3.")
+
+
+divide(5, 0)
+handlerror(5)
